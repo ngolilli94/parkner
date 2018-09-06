@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  active: false
+  address: MyString
+  latitude: MyString
+  longitute: MyString
+  move_by: 2018-09-06 17:51:12
+  remind_at: 2018-09-06 17:51:12
+
+two:
+  active: false
+  address: MyString
+  latitude: MyString
+  longitute: MyString
+  move_by: 2018-09-06 17:51:12
+  remind_at: 2018-09-06 17:51:12
