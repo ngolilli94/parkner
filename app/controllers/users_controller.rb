@@ -21,11 +21,6 @@ class UsersController < ApplicationController
     # template: users/new.html.erb
     end
 
-    def edit
-        @user = User.find(params[:id])
-        # template: users/edit.html.erb
-    end
-
     def create
         @user = User.new(user_params)
 
@@ -35,11 +30,16 @@ class UsersController < ApplicationController
             render 'new'
         end
     end
+
+    def edit
+        @user = current_user
+        # template: users/edit.html.erb
+    end
     
     def update
-        @user = User.find(params[:id])
+        @user = current_user
     
-        if @user.update(user_params) && @user.user.update(user_params)
+        if @user.update(user_params)
             redirect_to @user
         else
             render 'edit'
