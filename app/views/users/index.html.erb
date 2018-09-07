@@ -1,0 +1,17 @@
+
+<% if user_signed_in? %>
+<div>
+    <h1> Welcome back, <%= @user.first_name %>! </h1>
+
+    <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+</div>
+<h2>
+    <%= link_to 'Cars', cars_path %>
+</h2>
+
+<h2>
+    <%= link_to 'Park', new_parking_path %>
+</h2>
+
+
+<% end %>
