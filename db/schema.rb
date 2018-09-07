@@ -34,6 +34,10 @@ ActiveRecord::Schema.define(version: 2018_09_06_215738) do
     t.datetime "remind_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.bigint "car_id"
+    t.index ["car_id"], name: "index_parkings_on_car_id"
+    t.index ["user_id"], name: "index_parkings_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

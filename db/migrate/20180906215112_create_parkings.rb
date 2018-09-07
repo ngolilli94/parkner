@@ -11,6 +11,9 @@ class CreateParkings < ActiveRecord::Migration[5.2]
       t.datetime :remind_at
 
       t.timestamps
+
+      t.references :user
+      t.references :car
     end
   end
 end
