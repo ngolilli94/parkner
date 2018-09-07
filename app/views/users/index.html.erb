@@ -4,6 +4,8 @@
     <h1> Welcome back, <%= @user.first_name %>! </h1>
 
     <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+
+    <%= link_to 'Edit Profile', edit_user_path(@user) %>
 </div>
 <h2>
     <%= link_to 'Cars', cars_path %>

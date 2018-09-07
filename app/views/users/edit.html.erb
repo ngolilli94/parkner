@@ -1,0 +1,27 @@
+<% if user_signed_in? %>
+    <%= link_to 'Home', root_path %>
+
+    <h1> Edit Profile</h1>
+
+    <%= form_for @user do |f| %>
+        
+        <label for="firstName"> First Name:</label>
+        <%= f.text_field :first_name %>
+
+        <label for="lastName"> Last Name:</label>
+        <%= f.text_field :last_name %>
+
+        <label for="phone"> Phone:</label>
+        <%= f.text_field :phone %>
+
+        <label for="email"> Email:</label>
+        <%= f.text_field :email %>
+
+        <label for="password"> Password:</label>
+        <%= f.text_field :password %>
+
+        <%= f.button :submit %>
+
+    <% end %>
+
+<% end %>
