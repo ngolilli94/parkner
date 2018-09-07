@@ -7,8 +7,8 @@ User.new(
     )
 
 Car.new(
-    nickame: 'Nighthawk',
-    description: 'Black Viper'
-    default: true,
+    nickname: 'Nighthawk',
+    description: 'Black Viper',
+    default: true
 )
 
