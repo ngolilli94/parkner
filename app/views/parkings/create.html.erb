@@ -1,0 +1,5 @@
+<%= form_for @parking do |p| %>
+    <label for="car"> Car: </label>
+    <%= p.select :car_id, Car.all.map{|x| [x.nickname, x.id]} %>
+    <%= p.submit %>
+<% end %>
