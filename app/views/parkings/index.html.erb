@@ -1,9 +1,6 @@
 <% @user.parkings.each do |session| %>
-    <% @user.cars.each do |car| %>
-     <h2> <a href="/parkings/<%= session.id %>"> <%= car.nickname %> - <%= session.created_at.to_date.strftime("%B %d, %Y") %> Session </a></h2>
-     <% end %>
+    <% @car = Car.find(session.car_id) %>
+     <h2> <a href="/parkings/<%= session.id %>"> <%= @car.nickname %> - <%= session.created_at.to_date.strftime("%B %d, %Y") %> Session </a></h2>
  <% end %>
-
- 
 
  <a href="/parkings/new"> Add Session </a>

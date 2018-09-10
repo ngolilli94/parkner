@@ -5,26 +5,26 @@ class ParkingsController < ApplicationController
         @user = current_user
     end
 
-    def create
-        @parking = Parking.new(parking_params)
-        if @parking.save
-            redirect_to :controller => 'parkings', :action => 'index'
-        else
-            redirect_to new_parking_path, alert: "Error creating parking."
-        end 
+    def show
+        @parking = Parking.find(params[:id])
+        @parkedCar = @parking.car
     end
 
     def new
         @parking = Parking.new
     end
 
-    def edit
-        @parking = Parking.find(params[:id])
+    def create
+        @parking = Parking.new(parking_params)
+        if @parking.save
+            redirect_to :controller => 'parkings', :action => 'index', alert: "Parking session successfully created!"
+        else
+            redirect_to new_parking_path, alert: "Error creating parking."
+        end 
     end
 
-    def show
+    def edit
         @parking = Parking.find(params[:id])
-        @parkedCar = @parking.car
     end
 
     def update
