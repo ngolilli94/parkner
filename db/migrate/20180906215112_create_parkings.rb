@@ -10,10 +10,10 @@ class CreateParkings < ActiveRecord::Migration[5.2]
       t.datetime :move_by
       t.datetime :remind_at
 
-      t.timestamps
-
-      t.references :user
       t.references :car
+      t.references :user
+
+      t.timestamps
     end
   end
 end

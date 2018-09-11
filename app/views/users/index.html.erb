@@ -16,5 +16,23 @@
     <%= link_to 'Park', new_parking_path %>
 </h2>
 
+<h2>
+    Pakings
+</h2>
+<h3>
+    <% @parking.each do |p| %>
+        <p>
+            <%= p.address %>
+        </p>
+
+        <p>
+            <%= p.car_id %>
+        </p>
+
+        <p>
+            <%= p.car_id %>
+        </p>
+    <% end %>
+</h3>
 
 <% end %>

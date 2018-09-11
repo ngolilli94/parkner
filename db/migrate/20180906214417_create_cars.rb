@@ -5,6 +5,8 @@ class CreateCars < ActiveRecord::Migration[5.2]
       t.string :description
       t.boolean :default
 
+      t.references :user
+
       t.timestamps
     end
   end
