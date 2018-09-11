@@ -1,0 +1,33 @@
+<%= form_for @parking do |p| %>
+    <label for="active"> Active? </label>
+    <%= p.check_box :active %> <br>
+
+    <label for="address"> Address: </label>
+    <%= p.text_field :address %> <br>
+
+    <label for="start_latitude"> Start Latitude: </label>
+    <%= p.text_field :start_latitude %> <br>
+
+    <label for="end_latitude"> End Latitude: </label>
+    <%= p.text_field :end_latitude %> <br>
+
+    <label for="start_longitude"> Start Longitude: </label>
+    <%= p.text_field :start_longitude %> <br>
+
+    <label for="end_longitude"> End Longitude: </label>
+    <%= p.text_field :end_longitude %> <br>
+
+    <label for="move_by"> Move By: </label>
+    <%= p.datetime_field :move_by %> <br>
+
+    <label for="remind_at"> Remind At: </label>
+    <%= p.datetime_field :remind_at %> <br>
+
+    <label for="remind_at"> Remind At: </label>
+    <%= p.datetime_field :remind_at %> <br>
+
+    <%= p.hidden_field :user_id, :value=>current_user.id %>
+    <label for="car"> Car: </label>
+    <%= p.select :car_id, Car.all.map{|x| [x.nickname, x.id]} %>
+    <%= p.submit %>
+<% end %>
