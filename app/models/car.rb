@@ -1,5 +1,4 @@
 class Car < ApplicationRecord
-    has_many :parkings
-    has_one :user, through: :parkings
-
+    belongs_to :user
+    has_many :parkings, dependent: :destroy
 end
