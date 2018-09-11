@@ -13,17 +13,3 @@
 #     user_id: 1,
 # )
 
-# Parking.create(
-#     address: '90 John Street',
-#     car_id: 1,
-  
-# )
-
-
-Car.create(
-    nickname: 'Blueie',
-    description: 'Blue Telsa Model E',
-    default: true,
-    user_id: 2,
-
-)
